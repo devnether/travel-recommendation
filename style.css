@@ -1,0 +1,103 @@
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+  overflow: hidden;
+}
+
+.nav {
+  min-width: 100vh;
+  height: 50px;
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgba(51, 29, 1, 0.563),
+    rgba(51, 29, 1, 0.238)
+  );
+  align-items: center;
+  justify-content: right;
+}
+.nav a {
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+.nav .search-bar {
+  margin-right: 30px;
+  background: rgba(255, 255, 254, 0.685);
+  padding: 7px 20px 7px 20px;
+  border-radius: 15px;
+  border-style: none;
+  display: flex;
+  align-items: center;
+}
+.search-bar .keywords {
+  border: none;
+  background: transparent;
+  outline: none;
+  min-width: 300px;
+  color: rgba(51, 29, 1, 0.778);
+  font-weight: 550;
+}
+
+.search-icon {
+  max-width: 15px;
+}
+
+.search-bar .button {
+  padding: 5px;
+  min-width: 55px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgba(51, 29, 1, 0.558);
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      to left,
+      rgba(175, 126, 10, 0),
+      rgba(51, 29, 1, 0.353)
+    ),
+    url(resources/bkg.jpg);
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+
+  z-index: -1;
+}
+
+.content-container {
+  width: 37%;
+  margin-left: 200px;
+}
+
+.content-container h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.content-container p {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.content-container input {
+  padding: 10px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgba(51, 29, 1, 0.558);
+  margin-top: 20px;
+  color: white;
+  font-weight: 500;
+}

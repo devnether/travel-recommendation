@@ -2,7 +2,26 @@ body {
   position: relative;
   margin: 0;
   min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
-  overflow: hidden;
+  /*overflow: hidden;*/
+  color: white;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      to left,
+      rgba(175, 126, 10, 0),
+      rgba(51, 29, 1, 0.353)
+    ),
+    url(resources/bkg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
 }
 
 .nav {
@@ -56,43 +75,24 @@ body {
   font-weight: 500;
   margin-left: 10px;
 }
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(
-      to left,
-      rgba(175, 126, 10, 0),
-      rgba(51, 29, 1, 0.353)
-    ),
-    url(resources/bkg.jpg);
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
 
-  z-index: -1;
-}
-
-.content-container {
+.home-container {
   width: 37%;
-  margin-left: 200px;
+  margin-left: 50px;
 }
 
-.content-container h1 {
+.home-container h1 {
   font-size: 70px;
   color: white;
 }
 
-.content-container p {
+.home-container p {
   font-size: 24px;
   font-weight: 500;
   color: white;
 }
 
-.content-container input {
+.home-container input {
   padding: 10px;
   border-style: none;
   border-radius: 5px;
@@ -100,4 +100,58 @@ body::before {
   margin-top: 20px;
   color: white;
   font-weight: 500;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.main-container .social-media {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container .social-media img {
+  max-width: 30px;
+  margin-top: 15px;
+}
+
+.about-container {
+  width: 80%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.about-container .title {
+  font-size: 70px;
+}
+
+.about-container p {
+  background: rgba(51, 29, 1, 0.238);
+  padding: 2%;
+  font-size: 24px;
+}
+
+.team-container p {
+  background: none;
+}
+.team-container {
+  background: rgba(51, 29, 1, 0.238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-container h1 {
+  margin: 20px;
+}
+.member span {
+  background: rgba(51, 29, 1, 0.438);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
 }
